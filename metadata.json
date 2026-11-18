@@ -1,0 +1,6 @@
+{
+  "name": "LIONEL STREAM",
+  "description": "MediaCoreTV — Stream • Watch • Enjoy. Rwanda HD Agasobanuye streaming platform, live Rwandan TV channels, FM radio, and MTN MoMo VIP access.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

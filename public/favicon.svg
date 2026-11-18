@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050d1e"/>
+      <stop offset="50%" stop-color="#02060f"/>
+      <stop offset="100%" stop-color="#010307"/>
+    </linearGradient>
+
+    <linearGradient id="neon-cyan-green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="35%" stop-color="#0091ff"/>
+      <stop offset="65%" stop-color="#00ff66"/>
+      <stop offset="100%" stop-color="#76ff03"/>
+    </linearGradient>
+
+    <linearGradient id="play-green-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#69f0ae"/>
+      <stop offset="50%" stop-color="#00ff66"/>
+      <stop offset="100%" stop-color="#00c853"/>
+    </linearGradient>
+
+    <linearGradient id="film-ribbon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00e5ff"/>
+      <stop offset="50%" stop-color="#0077ff"/>
+      <stop offset="100%" stop-color="#0033aa"/>
+    </linearGradient>
+
+    <linearGradient id="mountains-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00b4d8" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#023e8a" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <filter id="glow-hard" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background rounded canvas -->
+  <rect width="500" height="500" rx="110" fill="url(#bg-grad)" stroke="#00f0ff" stroke-width="6" stroke-opacity="0.4"/>
+
+  <!-- Ambient Glow -->
+  <circle cx="250" cy="220" r="180" fill="#00d2ff" opacity="0.15" filter="url(#glow-hard)"/>
+  <circle cx="270" cy="220" r="140" fill="#00ff66" opacity="0.12" filter="url(#glow-hard)"/>
+
+  <!-- Kigali Silhouette Peaks -->
+  <path d="M 280 250 L 375 140 L 460 250 Z" fill="url(#mountains-grad)" opacity="0.75"/>
+  <path d="M 330 255 L 420 160 L 490 260 Z" fill="url(#mountains-grad)" opacity="0.9"/>
+  <path d="M 280 250 L 375 140 L 415 190" stroke="#00f0ff" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.9"/>
+
+  <!-- Kigali City Spire -->
+  <rect x="396" y="195" width="10" height="60" rx="1.5" fill="#00b4d8"/>
+  <ellipse cx="401" cy="195" rx="9" ry="3.5" fill="#00f5d4"/>
+  <path d="M 401 195 L 401 168" stroke="#00f5d4" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="401" cy="167" r="3" fill="#ffffff"/>
+
+  <!-- Modern High Rises -->
+  <rect x="355" y="210" width="16" height="45" rx="2" fill="#023e8a" stroke="#00b4d8" stroke-width="1.5"/>
+  <rect x="373" y="202" width="20" height="53" rx="2" fill="#0077b6" stroke="#00e5ff" stroke-width="1.5"/>
+
+  <!-- 3D Film Strip Loop on Left -->
+  <path d="M 155 102 C 105 115 55 160 58 215 C 62 275 105 315 155 305 C 100 300 78 255 78 210 C 78 160 115 118 175 106 Z" fill="url(#film-ribbon)"/>
+  <path d="M 155 102 C 105 115 55 160 58 215 C 62 275 105 315 155 305" stroke="#00f0ff" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+
+  <!-- Antennas with Glowing Neon Orbs -->
+  <line x1="225" y1="115" x2="160" y2="48" stroke="#00f0ff" stroke-width="7" stroke-linecap="round"/>
+  <line x1="225" y1="115" x2="160" y2="48" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="158" cy="46" r="16" fill="#00f0ff" filter="url(#glow-hard)"/>
+  <circle cx="158" cy="46" r="8" fill="#ffffff"/>
+
+  <line x1="255" y1="115" x2="315" y2="48" stroke="#00ff66" stroke-width="7" stroke-linecap="round"/>
+  <line x1="255" y1="115" x2="315" y2="48" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="317" cy="46" r="16" fill="#00ff66" filter="url(#glow-hard)"/>
+  <circle cx="317" cy="46" r="8" fill="#ffffff"/>
+
+  <!-- TV Monitor Outer Bezel -->
+  <rect x="122" y="110" width="240" height="175" rx="42" fill="#040b18" stroke="url(#neon-cyan-green)" stroke-width="11" filter="url(#glow-hard)"/>
+  <rect x="132" y="120" width="220" height="155" rx="34" fill="#02060e" stroke="#010408" stroke-width="3"/>
+
+  <!-- Central Emerald Green Play Button -->
+  <path d="M 216 156 C 216 151 222 148 227 151 L 288 193 C 292 195 292 200 288 202 L 227 244 C 222 247 216 244 216 239 Z" fill="url(#play-green-glow)" stroke="#b9f6ca" stroke-width="3" filter="url(#glow-hard)"/>
+  <path d="M 223 166 L 255 188 L 223 205 Z" fill="#ffffff" opacity="0.5"/>
+
+  <!-- Neon Swoosh Baseline -->
+  <path d="M 60 288 C 160 305 320 295 460 270" stroke="url(#neon-cyan-green)" stroke-width="8" stroke-linecap="round" fill="none" filter="url(#glow-hard)"/>
+
+  <!-- Typography: MediaCoreTV -->
+  <text x="80" y="375" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="54" fill="#ffffff">Media</text>
+  <text x="242" y="375" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="54" fill="#00ff66" filter="url(#glow-hard)">Core</text>
+  <text x="375" y="375" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="54" fill="#00f0ff" filter="url(#glow-hard)">TV</text>
+
+  <!-- Tagline: STREAM • WATCH • ENJOY -->
+  <text x="250" y="420" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="16" letter-spacing="5" fill="#f1f5f9">
+    STREAM <tspan fill="#00f0ff">•</tspan> WATCH <tspan fill="#00ff66">•</tspan> ENJOY
+  </text>
+</svg>

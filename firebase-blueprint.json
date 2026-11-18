@@ -1,0 +1,122 @@
+{
+  "entities": {
+    "Movie": {
+      "title": "Movie",
+      "description": "Represents an uploaded Agasobanuye movie with video stream URL, poster logo, umusobanuzi, genre, and metadata.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the movie"
+        },
+        "title": {
+          "type": "string",
+          "description": "Title of the movie"
+        },
+        "videoUrl": {
+          "type": "string",
+          "description": "Direct streaming video URL, HLS m3u8, or YouTube/Embed link"
+        },
+        "posterUrl": {
+          "type": "string",
+          "description": "URL to the cover image / logo"
+        },
+        "logoUrl": {
+          "type": "string",
+          "description": "URL to the movie badge or poster"
+        },
+        "umusobanuzi": {
+          "type": "string",
+          "description": "Name of the translator / commentator (e.g., Rocky Kimomo, Junior Giti, Sankara)"
+        },
+        "type": {
+          "type": "string",
+          "description": "Movie or Series classification"
+        },
+        "type_category": {
+          "type": "string",
+          "description": "Genre classification (e.g., Horror, Action, Drama, Sci-Fi)"
+        },
+        "description": {
+          "type": "string",
+          "description": "Summary or synopsis"
+        },
+        "streamType": {
+          "type": "string",
+          "description": "Stream format type"
+        },
+        "isLive": {
+          "type": "boolean",
+          "description": "Whether the item is a live stream"
+        },
+        "isEnabled": {
+          "type": "boolean",
+          "description": "Whether item is visible in the library"
+        },
+        "rating": {
+          "type": "number",
+          "description": "User rating score"
+        },
+        "year": {
+          "type": "number",
+          "description": "Release year"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Timestamp when uploaded"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "Timestamp when modified"
+        }
+      },
+      "required": ["id", "title", "videoUrl"]
+    },
+    "TvChannel": {
+      "title": "TvChannel",
+      "description": "Curated live TV broadcast network information",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Channel identifier"
+        },
+        "name": {
+          "type": "string",
+          "description": "Channel station name"
+        },
+        "logo": {
+          "type": "string",
+          "description": "Channel logo image URL"
+        },
+        "streamUrl": {
+          "type": "string",
+          "description": "Live stream URL"
+        },
+        "country": {
+          "type": "string",
+          "description": "Country of origin"
+        },
+        "category": {
+          "type": "string",
+          "description": "Broadcast genre category"
+        },
+        "isLive": {
+          "type": "boolean",
+          "description": "Live broadcast indicator"
+        }
+      },
+      "required": ["id", "name"]
+    }
+  },
+  "firestore": {
+    "/movies/{movieId}": {
+      "schema": "Movie",
+      "description": "Global collection of uploaded Agasobanuye movies"
+    },
+    "/channels/{channelId}": {
+      "schema": "TvChannel",
+      "description": "Live Rwandan TV channels collection"
+    }
+  }
+}

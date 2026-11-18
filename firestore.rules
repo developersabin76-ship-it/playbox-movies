@@ -1,0 +1,39 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper to validate movie data schema
+    function isValidMovie(data) {
+      return data.id is string &&
+             data.title is string && data.title.size() > 0 &&
+             data.videoUrl is string && data.videoUrl.size() > 0;
+    }
+
+    // Helper to validate channel data schema
+    function isValidChannel(data) {
+      return data.id is string &&
+             data.name is string && data.name.size() > 0;
+    }
+
+    // Public Agasobanuye Movies Collection
+    match /movies/{movieId} {
+      allow read: if true;
+      allow create: if isValidMovie(request.resource.data);
+      allow update: if isValidMovie(request.resource.data);
+      allow delete: if true;
+    }
+
+    // Curated TV Channels Collection
+    match /channels/{channelId} {
+      allow read: if true;
+      allow create: if isValidChannel(request.resource.data);
+      allow update: if isValidChannel(request.resource.data);
+      allow delete: if true;
+    }
+
+    // Test connection endpoint
+    match /test/{docId} {
+      allow read, write: if true;
+    }
+  }
+}
